@@ -1,0 +1,1105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const quickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Call (954) 824-1894', href: 'tel:9548241894' },
+];
+---
+<BaseLayout
+  title="Get Started | Blackburn Capital Partners"
+  description="One click — tell us who you are and we'll route you to the right conversation. Private, confidential."
+>
+  <Header variant="minimal" />
+
+  <div class="funnel">
+
+    <!-- PROGRESS -->
+    <div class="progress-label" id="progressLabel">Step 1 of 4</div>
+    <div class="progress">
+      <div class="progress-step active" id="p1"></div>
+      <div class="progress-step" id="p2"></div>
+      <div class="progress-step" id="p3"></div>
+      <div class="progress-step" id="p4"></div>
+    </div>
+
+    <!-- SCREEN 1: Identify audience -->
+    <div class="screen active" id="screen1">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Let's Get Started</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">Which Best <em>Describes You?</em></h1>
+      <p class="subtitle">Tell us who you are so we can route you to the right conversation. One click — we'll handle the rest.</p>
+
+      <div class="pills">
+        <button class="pill" data-audience="hotel">
+          <span class="pill-text">I own a hotel and I'm thinking about selling</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-audience="capital">
+          <span class="pill-text">I have capital to invest or lend</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-audience="professional">
+          <span class="pill-text">I'm a real estate professional</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SCREEN 2A: Hotel owner — location -->
+    <div class="screen" id="screen2a">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Your Hotel</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">Where Is <em>Your Hotel?</em></h1>
+      <p class="subtitle">We operate exclusively in six Sun Belt coastal states. Pick the one your hotel is in.</p>
+
+      <div class="pills grid">
+        <button class="pill" data-field="hotel_state" data-value="Florida" data-from="2a" data-to="3a">
+          <span class="pill-text">Florida</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="hotel_state" data-value="Georgia" data-from="2a" data-to="3a">
+          <span class="pill-text">Georgia</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="hotel_state" data-value="South Carolina" data-from="2a" data-to="3a">
+          <span class="pill-text">South Carolina</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="hotel_state" data-value="North Carolina" data-from="2a" data-to="3a">
+          <span class="pill-text">North Carolina</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="hotel_state" data-value="Alabama" data-from="2a" data-to="3a">
+          <span class="pill-text">Alabama</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="hotel_state" data-value="Mississippi" data-from="2a" data-to="3a">
+          <span class="pill-text">Mississippi</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="hotel_state" data-value="Other / Multiple" data-from="2a" data-to="3a" style="grid-column: 1 / -1;">
+          <span class="pill-text">Other state or multiple locations</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="2a" data-back-to="1">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 3A: Hotel owner — size -->
+    <div class="screen" id="screen3a">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Hotel Size</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">How Many Rooms <em>Does It Have?</em></h1>
+      <p class="subtitle">A rough estimate is fine. We'll cover the details on the call.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="rooms" data-value="Under 50" data-from="3a" data-to="4a">
+          <span class="pill-text">Under 50 rooms</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="rooms" data-value="50 to 100" data-from="3a" data-to="4a">
+          <span class="pill-text">50 to 100 rooms</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="rooms" data-value="100 to 200" data-from="3a" data-to="4a">
+          <span class="pill-text">100 to 200 rooms</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="rooms" data-value="200 to 400" data-from="3a" data-to="4a">
+          <span class="pill-text">200 to 400 rooms</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="rooms" data-value="Over 400" data-from="3a" data-to="4a">
+          <span class="pill-text">Over 400 rooms</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="3a" data-back-to="2a">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 4A: Hotel owner — timeline -->
+    <div class="screen" id="screen4a">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Your Timeline</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">When Would You Like <em>to Sell?</em></h1>
+      <p class="subtitle">There's no wrong answer. Your timeline shapes our offer structure.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="timeline" data-value="Ready now" data-from="4a" data-to="contact">
+          <span class="pill-text">Ready to sell now</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="30-90 days" data-from="4a" data-to="contact">
+          <span class="pill-text">Within 30 to 90 days</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="3-6 months" data-from="4a" data-to="contact">
+          <span class="pill-text">3 to 6 months</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="6-12 months" data-from="4a" data-to="contact">
+          <span class="pill-text">6 to 12 months</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="Just exploring" data-from="4a" data-to="contact">
+          <span class="pill-text">Just exploring &mdash; no rush</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="4a" data-back-to="3a">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 2B: Capital — structure -->
+    <div class="screen" id="screen2b">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Your Capital</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">How Do You Prefer <em>to Deploy Capital?</em></h1>
+      <p class="subtitle">Equity has higher upside. Debt has lower risk. We work with both.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="capital_type" data-value="Equity" data-from="2b" data-to="3b">
+          <span class="pill-text">Equity &mdash; I want upside in the deal</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="capital_type" data-value="Debt" data-from="2b" data-to="3b">
+          <span class="pill-text">Debt &mdash; I want secured fixed returns</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="capital_type" data-value="Both" data-from="2b" data-to="3b">
+          <span class="pill-text">Both &mdash; I do equity and debt deals</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="capital_type" data-value="Not sure" data-from="2b" data-to="3b">
+          <span class="pill-text">Not sure yet &mdash; I'd like to discuss</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="2b" data-back-to="1">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 3B: Capital — check size -->
+    <div class="screen" id="screen3b">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Check Size</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">What's Your Typical <em>Check Size?</em></h1>
+      <p class="subtitle">This helps us match you with the right deals. Confidential and not shared.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="check_size" data-value="$100K-250K" data-from="3b" data-to="4b">
+          <span class="pill-text">$100,000 to $250,000</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="check_size" data-value="$250K-500K" data-from="3b" data-to="4b">
+          <span class="pill-text">$250,000 to $500,000</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="check_size" data-value="$500K-1M" data-from="3b" data-to="4b">
+          <span class="pill-text">$500,000 to $1 million</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="check_size" data-value="$1M-5M" data-from="3b" data-to="4b">
+          <span class="pill-text">$1 million to $5 million</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="check_size" data-value="$5M+" data-from="3b" data-to="4b">
+          <span class="pill-text">$5 million or more</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="3b" data-back-to="2b">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 4B: Capital — timeline -->
+    <div class="screen" id="screen4b">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Your Timeline</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">When Are You Looking <em>to Deploy?</em></h1>
+      <p class="subtitle">Some deals are immediate. Others are 60 to 90 days out. Let us know your runway.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="timeline" data-value="Ready now" data-from="4b" data-to="contact">
+          <span class="pill-text">Ready to deploy now</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="1-3 months" data-from="4b" data-to="contact">
+          <span class="pill-text">Within 1 to 3 months</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="3-6 months" data-from="4b" data-to="contact">
+          <span class="pill-text">3 to 6 months</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="6-12 months" data-from="4b" data-to="contact">
+          <span class="pill-text">6 to 12 months</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="Just exploring" data-from="4b" data-to="contact">
+          <span class="pill-text">Just exploring &mdash; no rush</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="4b" data-back-to="3b">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 2C: Professional — role -->
+    <div class="screen" id="screen2c">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Your Role</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">What's Your <em>Role?</em></h1>
+      <p class="subtitle">We work with operators, brokers, lenders, and GPs across the Southeast.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="role" data-value="Hotel Operator" data-from="2c" data-to="3c">
+          <span class="pill-text">Hotel operator or conversion sponsor</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="role" data-value="Broker" data-from="2c" data-to="3c">
+          <span class="pill-text">Commercial real estate broker</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="role" data-value="Institutional Lender" data-from="2c" data-to="3c">
+          <span class="pill-text">Institutional lender or capital provider</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="role" data-value="GP / Sponsor" data-from="2c" data-to="3c">
+          <span class="pill-text">GP, sponsor, or fund manager</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="role" data-value="Other" data-from="2c" data-to="3c">
+          <span class="pill-text">Something else</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="2c" data-back-to="1">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 3C: Professional — intent -->
+    <div class="screen" id="screen3c">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Why Connect</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">What Brings You <em>to Us?</em></h1>
+      <p class="subtitle">We tailor every conversation to what you actually need.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="intent" data-value="Bring a deal" data-from="3c" data-to="4c">
+          <span class="pill-text">I have a hotel deal I'd like to bring you</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="intent" data-value="Co-invest" data-from="3c" data-to="4c">
+          <span class="pill-text">I'd like to co-invest or partner on deals</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="intent" data-value="Provide capital" data-from="3c" data-to="4c">
+          <span class="pill-text">I'd like to provide capital on your deals</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="intent" data-value="Connect" data-from="3c" data-to="4c">
+          <span class="pill-text">Just want to connect and build a relationship</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="3c" data-back-to="2c">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 4C: Professional — timeline -->
+    <div class="screen" id="screen4c">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Your Timeline</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">When Should <em>We Connect?</em></h1>
+      <p class="subtitle">Tell us your urgency. We'll match the conversation to your timeline.</p>
+
+      <div class="pills">
+        <button class="pill" data-field="timeline" data-value="This week" data-from="4c" data-to="contact">
+          <span class="pill-text">This week &mdash; time-sensitive</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="Next 30 days" data-from="4c" data-to="contact">
+          <span class="pill-text">Within the next 30 days</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="1-3 months" data-from="4c" data-to="contact">
+          <span class="pill-text">1 to 3 months out</span>
+          <span class="pill-icon"></span>
+        </button>
+        <button class="pill" data-field="timeline" data-value="Just exploring" data-from="4c" data-to="contact">
+          <span class="pill-text">Just exploring &mdash; no rush</span>
+          <span class="pill-icon"></span>
+        </button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn-back" data-back-from="4c" data-back-to="3c">&larr; Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN: CONTACT -->
+    <div class="screen" id="screenContact">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">Last Step</div>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="question">How Should <em>We Reach You?</em></h1>
+      <p class="subtitle">Three quick fields. We'll be in touch within 24 hours to schedule a call.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="field">
+          <label class="field-label">Full Name</label>
+          <input type="text" class="field-input" id="contactName" placeholder="James Blackburn" required />
+        </div>
+        <div class="field">
+          <label class="field-label">Phone Number</label>
+          <input type="tel" class="field-input" id="contactPhone" placeholder="(000) 000-0000" required />
+        </div>
+        <div class="field">
+          <label class="field-label">Email Address</label>
+          <input type="email" class="field-input" id="contactEmail" placeholder="you@example.com" required />
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="btn-back" id="backToTimeline">&larr; Back</button>
+          <button type="submit" class="btn-submit">Submit &amp; Continue</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SCREEN: THANKS -->
+    <div class="screen" id="screenThanks">
+      <div class="thanks">
+        <div class="thanks-icon">
+          <div class="thanks-check"></div>
+        </div>
+        <h1 class="question">Thank You. <em>We've Got It.</em></h1>
+        <p class="subtitle" id="thanksMessage">
+          We received your information and will be in touch within 24 hours. In the meantime, you can book a private call directly on the calendar below.
+        </p>
+
+        <div class="thanks-photo-wrap">
+          <img src="/images/jim-blackburn.png" alt="Jim Blackburn" class="thanks-photo" />
+        </div>
+        <div class="thanks-name">Jim Blackburn</div>
+        <div class="thanks-title">Founder &middot; Blackburn Capital Partners</div>
+
+        <div class="calendar-block">
+          <div class="calendar-block-eyebrow">Skip the Wait</div>
+          <h3 class="calendar-block-headline">Book a Call Right Now</h3>
+          <p class="calendar-block-body">
+            Choose a time that works for you. 20 minute private call, no obligation, completely confidential.
+          </p>
+          <a href="#" class="btn-calendar" id="openCalendarBtn">Open Calendar</a>
+        </div>
+
+        <div class="thanks-divider"></div>
+
+        <p class="thanks-alt">
+          Or call directly: <a href="tel:9548241894">(954) 824-1894</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <Footer quickLinks={quickLinks} emailLinkHref="tel:9548241894" />
+</BaseLayout>
+
+<script is:inline>
+  // Store all answers
+  const answers = {
+    audience: null,
+    hotel_state: null,
+    rooms: null,
+    capital_type: null,
+    check_size: null,
+    role: null,
+    intent: null,
+    timeline: null,
+    name: null,
+    phone: null,
+    email: null
+  };
+
+  // Track last timeline screen for back navigation from contact
+  let lastTimelineScreen = null;
+
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen' + id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateProgress(step) {
+    for (let i = 1; i <= 4; i++) {
+      const el = document.getElementById('p' + i);
+      el.classList.remove('active', 'complete');
+      if (i < step) el.classList.add('complete');
+      else if (i === step) el.classList.add('active');
+    }
+    document.getElementById('progressLabel').textContent = 'Step ' + step + ' of 4';
+  }
+
+  function selectAudience(type) {
+    answers.audience = type;
+    if (type === 'hotel') {
+      updateProgress(2);
+      showScreen('2a');
+    } else if (type === 'capital') {
+      updateProgress(2);
+      showScreen('2b');
+    } else if (type === 'professional') {
+      updateProgress(2);
+      showScreen('2c');
+    }
+  }
+
+  function selectAndAdvance(field, value, from, to) {
+    answers[field] = value;
+
+    // Determine which step we're moving to
+    if (to === '3a' || to === '3b' || to === '3c') {
+      updateProgress(3);
+    } else if (to === '4a' || to === '4b' || to === '4c') {
+      updateProgress(4);
+    } else if (to === 'contact') {
+      lastTimelineScreen = from;
+      // Contact screen is still part of step 4
+      updateProgress(4);
+    }
+
+    if (to === 'contact') {
+      showScreen('Contact');
+    } else {
+      showScreen(to);
+    }
+  }
+
+  function goBack(from, to) {
+    // Determine progress step based on destination
+    if (to === '1') {
+      updateProgress(1);
+    } else if (to === '2a' || to === '2b' || to === '2c') {
+      updateProgress(2);
+    } else if (to === '3a' || to === '3b' || to === '3c') {
+      updateProgress(3);
+    }
+    showScreen(to);
+  }
+
+  function goBackToTimeline() {
+    if (lastTimelineScreen) {
+      updateProgress(4);
+      showScreen(lastTimelineScreen);
+    }
+  }
+
+  function submitForm(event) {
+    event.preventDefault();
+    answers.name = document.getElementById('contactName').value;
+    answers.phone = document.getElementById('contactPhone').value;
+    answers.email = document.getElementById('contactEmail').value;
+
+    // In production: send `answers` to backend via fetch()
+    // For now, log to console
+    console.log('Form submitted:', answers);
+
+    // Customize the thank-you message based on audience
+    let msg = 'We received your information and will be in touch within 24 hours.';
+    if (answers.audience === 'hotel') {
+      msg = 'We received your information. We will review your hotel and reach out within 24 hours to discuss offer structures. In the meantime, you can book a private call directly on the calendar below.';
+    } else if (answers.audience === 'capital') {
+      msg = 'We received your application. We will review your investment criteria and reach out within 24 hours with next steps. In the meantime, you can book a private call directly on the calendar below.';
+    } else if (answers.audience === 'professional') {
+      msg = 'We received your information. We will reach out within 24 hours to set up an introductory call. In the meantime, you can book directly on the calendar below.';
+    }
+    document.getElementById('thanksMessage').textContent = msg;
+
+    showScreen('Thanks');
+  }
+
+  function openCalendar(event) {
+    event.preventDefault();
+    // Placeholder — in production this opens Calendly, Cal.com, or similar
+    alert('Calendar integration goes here. Connect Calendly, Cal.com, or your preferred scheduling tool.');
+  }
+
+  // ── Wire up DOM listeners (CSP-friendly, no inline handlers) ──
+  document.addEventListener('DOMContentLoaded', () => {
+    // Audience pills on screen 1
+    document.querySelectorAll('[data-audience]').forEach(btn => {
+      btn.addEventListener('click', () => selectAudience(btn.dataset.audience));
+    });
+
+    // Generic field pills (selectAndAdvance)
+    document.querySelectorAll('.pill[data-field]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectAndAdvance(btn.dataset.field, btn.dataset.value, btn.dataset.from, btn.dataset.to);
+      });
+    });
+
+    // Back buttons
+    document.querySelectorAll('.btn-back[data-back-from]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        goBack(btn.dataset.backFrom, btn.dataset.backTo);
+      });
+    });
+
+    // Contact form
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) contactForm.addEventListener('submit', submitForm);
+
+    // Back from contact to timeline
+    const backToTimeline = document.getElementById('backToTimeline');
+    if (backToTimeline) backToTimeline.addEventListener('click', goBackToTimeline);
+
+    // Calendar
+    const calBtn = document.getElementById('openCalendarBtn');
+    if (calBtn) calBtn.addEventListener('click', openCalendar);
+  });
+</script>
+
+<style>
+  html {
+    color-scheme: light only !important;
+    background: #F8F7F4 !important;
+  }
+
+  :global(body) {
+    color: #2C2C2C !important;
+    background: #F8F7F4 !important;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html, :global(body) {
+      background: #F8F7F4 !important;
+      color: #2C2C2C !important;
+    }
+  }
+
+  :global(body)::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(30, 42, 58, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 42, 58, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .funnel {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 100px 24px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .progress {
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .progress-step {
+    flex: 1;
+    height: 4px;
+    background: rgba(30, 42, 58, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-step.active { background: var(--crimson); }
+  .progress-step.complete { background: var(--navy); }
+
+  .progress-label {
+    text-align: center;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .screen {
+    width: 100%;
+    max-width: 720px;
+    display: none;
+    animation: fadeIn 0.4s ease both;
+  }
+
+  .screen.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .eyebrow-line {
+    width: 24px;
+    height: 1px;
+    background: var(--crimson);
+  }
+
+  .eyebrow-text {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    font-weight: 700;
+  }
+
+  .question {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #1E2A3A !important;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .question em {
+    font-style: italic;
+    color: #8B1A1A !important;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+    text-align: center;
+    margin-bottom: 48px;
+    font-weight: 400;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pills {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .pill {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--border);
+    color: #2C2C2C !important;
+    padding: 24px 28px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(30, 42, 58, 0.04);
+  }
+
+  .pill:hover {
+    border-color: var(--navy);
+    background: var(--white);
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(30, 42, 58, 0.1);
+  }
+
+  .pill.selected {
+    border-color: var(--crimson);
+    background: rgba(139, 26, 26, 0.04);
+  }
+
+  .pill-text {
+    flex: 1;
+    color: #2C2C2C !important;
+    font-weight: 500;
+  }
+
+  .pill-icon {
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    position: relative;
+    background: var(--off-white);
+  }
+
+  .pill:hover .pill-icon {
+    border-color: var(--crimson);
+    background: var(--crimson);
+  }
+
+  .pill-icon::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--navy);
+    border-top: 2px solid var(--navy);
+    transform: rotate(45deg) translate(-2px, 2px);
+    opacity: 0.5;
+    transition: opacity 0.2s, border-color 0.2s;
+  }
+
+  .pill:hover .pill-icon::after {
+    opacity: 1;
+    border-color: var(--white);
+  }
+
+  .pills.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .pills.grid .pill {
+    padding: 22px 24px;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .field-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .field-input {
+    border: 1.5px solid var(--border);
+    background: #FFFFFF !important;
+    padding: 20px 22px;
+    font-size: 1.05rem;
+    font-family: 'Raleway', sans-serif;
+    color: #2C2C2C !important;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-weight: 500;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(30, 42, 58, 0.04);
+  }
+
+  .field-input::placeholder {
+    color: #aaa;
+    font-weight: 400;
+  }
+
+  .field-input:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(30, 42, 58, 0.08);
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 40px;
+    align-items: stretch;
+  }
+
+  .btn-back {
+    background: transparent;
+    color: var(--warm-gray);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 18px 28px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid var(--border);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 4px;
+  }
+
+  .btn-back:hover {
+    border-color: var(--navy);
+    color: var(--navy);
+    background: var(--white);
+  }
+
+  .btn-submit {
+    flex: 1;
+    background: var(--crimson);
+    color: white;
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    padding: 20px 32px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    transition: background 0.2s, transform 0.2s;
+    border-radius: 4px;
+  }
+
+  .btn-submit:hover {
+    background: var(--crimson-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-submit:disabled {
+    background: var(--border);
+    color: var(--warm-gray);
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .thanks { text-align: center; }
+
+  .thanks-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 28px;
+    border-radius: 50%;
+    background: rgba(139, 26, 26, 0.08);
+    border: 2px solid var(--crimson);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thanks-check {
+    width: 36px;
+    height: 18px;
+    border-bottom: 3px solid var(--crimson);
+    border-right: 3px solid var(--crimson);
+    transform: rotate(-45deg) translate(2px, -4px);
+  }
+
+  .thanks-photo-wrap {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--navy);
+    position: relative;
+    box-shadow: 0 4px 16px rgba(30, 42, 58, 0.12);
+  }
+
+  .thanks-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.02);
+  }
+
+  .thanks-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .thanks-title {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 36px;
+    font-weight: 600;
+  }
+
+  .calendar-block {
+    background: var(--navy);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    padding: 40px 32px;
+    border-radius: 6px;
+    margin-top: 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .calendar-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--crimson), var(--gold));
+  }
+
+  .calendar-block-eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .calendar-block-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .calendar-block-body {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+
+  .btn-calendar {
+    background: var(--gold);
+    color: var(--navy-deep);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 18px 36px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 4px;
+  }
+
+  .btn-calendar:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  .thanks-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--border);
+    margin: 36px auto;
+  }
+
+  .thanks-alt {
+    font-size: 0.92rem;
+    color: var(--warm-gray);
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  .thanks-alt a {
+    color: var(--crimson);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .thanks-alt a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .funnel { padding: 80px 20px 40px; }
+    .progress { margin-bottom: 36px; }
+    .question { font-size: 1.85rem; }
+    .subtitle { font-size: 0.92rem; margin-bottom: 36px; }
+    .pill { padding: 20px 22px; font-size: 0.98rem; }
+    .pills.grid { grid-template-columns: 1fr; }
+    .nav-buttons { flex-direction: column-reverse; gap: 10px; }
+    .btn-back { width: 100%; text-align: center; padding: 16px; }
+    .thanks-name { font-size: 0.95rem; }
+    .calendar-block { padding: 28px 22px; }
+    .calendar-block-headline { font-size: 1.3rem; }
+  }
+</style>

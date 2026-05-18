@@ -1,0 +1,123 @@
+---
+interface Props {
+  variant?: 'full' | 'minimal';
+}
+
+const { variant = 'minimal' } = Astro.props;
+---
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Blackburn Capital Partners
+  </a>
+
+  {variant === 'full' ? (
+    <div class="nav-links">
+      <a href="#deals">Hotel Deals</a>
+      <a href="#investors">Investors</a>
+      <a href="#about">About</a>
+      <a href="#territory">Territory</a>
+      <a href="/start" class="nav-cta">Get Started</a>
+    </div>
+  ) : (
+    <a href="tel:9548241894" class="nav-phone">(954) 824-1894</a>
+  )}
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    padding: 0 32px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .nav-logo-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--crimson);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-links a {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-links a.nav-cta {
+    background: var(--crimson);
+    color: white;
+    padding: 9px 18px;
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+  }
+
+  .nav-links a.nav-cta:hover {
+    background: var(--crimson-light);
+    color: white;
+  }
+
+  .nav-phone {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .nav-phone:hover { color: var(--gold-light); }
+
+  @media (max-width: 1024px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; height: 60px; }
+    .nav-logo { font-size: 0.85rem; }
+    .nav-links { gap: 0; }
+    .nav-links a.nav-cta {
+      padding: 8px 14px;
+      font-size: 0.52rem;
+      letter-spacing: 0.12em;
+    }
+    .nav-phone { font-size: 0.75rem; }
+  }
+</style>

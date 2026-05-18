@@ -1,0 +1,792 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const quickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Get a Confidential Offer', href: '#contact' },
+  { label: 'Call (954) 824-1894', href: 'tel:9548241894' },
+];
+---
+<BaseLayout
+  title="Sell Your Hotel | Blackburn Capital Partners"
+  description="Private, confidential hotel acquisition offers across the Sun Belt Coastal Crescent. Three offer structures. 72-hour written response."
+>
+  <Header variant="minimal" />
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line"></div>
+          <div class="hero-eyebrow-text">For Hotel Owners</div>
+        </div>
+        <h1 class="hero-headline">
+          Ready to Exit Your Hotel? <em>Privately. Confidentially.</em>
+        </h1>
+        <p class="hero-body">
+          If you own a distressed, aging, or underperforming hotel anywhere in the Sun
+          Belt Coastal Crescent, we want to talk. No MLS listings. No public marketing.
+          No strangers walking through your property. Just a private conversation about
+          what your hotel is actually worth.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Get a Confidential Offer</a>
+          <a href="tel:9548241894" class="btn-phone-large">Call (954) 824-1894</a>
+        </div>
+      </div>
+      <div class="hero-photo-card">
+        <img src="/images/jim-blackburn.png" alt="Jim Blackburn" class="hero-photo" />
+        <div class="hero-photo-badge">
+          <div class="hero-photo-name">Jim Blackburn</div>
+          <div class="hero-photo-title">Founder &middot; Blackburn Capital Partners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE OPTIONS -->
+  <section class="section cream">
+    <div class="section-inner">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <div class="section-eyebrow-text">Three Ways to Sell</div>
+      </div>
+      <h2 class="section-headline">Pick the Offer <em>That Fits.</em></h2>
+      <p class="section-sub">
+        Every hotel sale is different. Some owners need cash fast and will accept a
+        lower price for speed. Others want top dollar and have the time for a thorough
+        closing. We structure offers three ways so you choose what works for your
+        timeline, your situation, and your number.
+      </p>
+
+      <div class="offer-grid">
+        <div class="offer-col cash">
+          <div class="offer-name">Cash Close</div>
+          <div class="offer-tagline">Fastest Exit</div>
+          <div class="offer-price">Lower of the three</div>
+          <div class="offer-price-sub">Speed comes at a discount</div>
+          <ul class="offer-features">
+            <li><span class="label">Timeline</span> <span class="value">30 days</span></li>
+            <li><span class="label">Financing</span> <span class="value">None &mdash; all cash</span></li>
+            <li><span class="label">Diligence</span> <span class="value">Minimal</span></li>
+            <li><span class="label">Contingencies</span> <span class="value">None</span></li>
+            <li><span class="label">Best For</span> <span class="value">Owners who need out fast</span></li>
+          </ul>
+        </div>
+
+        <div class="offer-col featured">
+          <div class="offer-best-tag">Most Popular</div>
+          <div class="offer-name">Standard Close</div>
+          <div class="offer-tagline">Best Balance</div>
+          <div class="offer-price">Market price</div>
+          <div class="offer-price-sub">Speed and value, balanced</div>
+          <ul class="offer-features">
+            <li><span class="label">Timeline</span> <span class="value">60 days</span></li>
+            <li><span class="label">Financing</span> <span class="value">Yes &mdash; pre-arranged</span></li>
+            <li><span class="label">Diligence</span> <span class="value">Standard 30 days</span></li>
+            <li><span class="label">Contingencies</span> <span class="value">Limited</span></li>
+            <li><span class="label">Best For</span> <span class="value">Most sellers</span></li>
+          </ul>
+        </div>
+
+        <div class="offer-col diligence">
+          <div class="offer-name">Diligence Close</div>
+          <div class="offer-tagline">Highest Price</div>
+          <div class="offer-price">Top of market</div>
+          <div class="offer-price-sub">Time enables maximum value</div>
+          <ul class="offer-features">
+            <li><span class="label">Timeline</span> <span class="value">90 days</span></li>
+            <li><span class="label">Financing</span> <span class="value">Yes &mdash; optimized</span></li>
+            <li><span class="label">Diligence</span> <span class="value">Full 60 days</span></li>
+            <li><span class="label">Contingencies</span> <span class="value">Standard</span></li>
+            <li><span class="label">Best For</span> <span class="value">Owners with time</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <div class="section-eyebrow-text">Why Sell to Us</div>
+      </div>
+      <h2 class="section-headline">Five Reasons Hotel Owners <em>Pick Up the Phone.</em></h2>
+      <p class="section-sub">
+        Most hotel owners think their only option is a public listing through CoStar or
+        Hotel Brokers International. We give you a third option &mdash; a private capital
+        markets firm with a network of pre-qualified buyers waiting on deals like yours.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <div class="benefit-headline">Total Confidentiality</div>
+          <p class="benefit-body">
+            No MLS listing. No CoStar posting. No public marketing of any kind. Your
+            staff, your guests, and your competitors never know your hotel is for sale
+            until the deal is closed.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <div class="benefit-headline">Three Offer Structures</div>
+          <p class="benefit-body">
+            Cash, financed, or hybrid &mdash; you pick the structure that fits your
+            timeline and your number. Most sellers do not realize they have options. We
+            give you three.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <div class="benefit-headline">As-Is Purchase</div>
+          <p class="benefit-body">
+            No repairs required. No renovations expected. No punch list to clear before
+            closing. We buy your hotel exactly as it sits today, with all of its
+            problems and all of its potential.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <div class="benefit-headline">72-Hour Response</div>
+          <p class="benefit-body">
+            One conversation. One walkthrough of your numbers. Within 72 hours we come
+            back with a written offer across all three structures. You decide which one
+            works.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">05</div>
+          <div class="benefit-headline">We Close What We Sign</div>
+          <p class="benefit-body">
+            Our buyers are pre-vetted, pre-funded, and contracted to perform. When we
+            sign a purchase agreement with you, we close. No retrading. No last-minute
+            walkaways. Period.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">06</div>
+          <div class="benefit-headline">Sun Belt Specialists</div>
+          <p class="benefit-body">
+            We only work in six Sun Belt coastal states. We know your market, your
+            competitors, your local lenders, and your buyers. No outsider trying to
+            learn your geography on your nickel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section cream">
+    <div class="section-inner">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <div class="section-eyebrow-text">The Process</div>
+      </div>
+      <h2 class="section-headline">From First Call <em>to Closing Table.</em></h2>
+      <p class="section-sub">Four simple steps. No surprises. No hidden parties.</p>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <div class="process-headline">Confidential Call</div>
+          <p class="process-body">
+            A 20-minute private conversation. You tell us about your hotel and your
+            situation. We tell you what we think it is worth.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <div class="process-headline">Underwriting</div>
+          <p class="process-body">
+            We review your financials, occupancy, and market position. No site visit
+            yet. No staff disruption. Just numbers.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <div class="process-headline">Three Written Offers</div>
+          <p class="process-body">
+            Within 72 hours you receive a written letter of intent with all three offer
+            structures laid out side by side. You choose.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <div class="process-headline">Close &amp; Wire</div>
+          <p class="process-body">
+            Standard purchase contract. Title and escrow handled by our network. You
+            wire-receive funds at closing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="contact">
+    <div class="form-inner">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <div class="section-eyebrow-text">Start the Conversation</div>
+      </div>
+      <h2 class="section-headline">Tell Us About <em>Your Hotel.</em></h2>
+      <p class="section-sub">
+        The conversation is confidential. The offer is free. There is no obligation.
+        Tell us a little about your hotel and we will reach out within 24 hours to set
+        up a private call.
+      </p>
+
+      <form class="signup-form">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-input" placeholder="Your first name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-input" placeholder="Your last name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <input type="tel" class="form-input" placeholder="(000) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Hotel Location</label>
+          <input type="text" class="form-input" placeholder="City, State" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Approximate Number of Rooms</label>
+          <select class="form-select">
+            <option>Under 50 rooms</option>
+            <option>50 to 100 rooms</option>
+            <option>100 to 200 rooms</option>
+            <option>200 to 400 rooms</option>
+            <option>Over 400 rooms</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label class="form-label">Tell Us About Your Situation</label>
+          <textarea class="form-input" rows="4" placeholder="Hotel brand, age, current occupancy, why you are considering selling, ideal timeline..."></textarea>
+        </div>
+      </form>
+      <button class="form-submit">Request a Confidential Offer</button>
+      <p class="form-disclaimer">
+        Your information is confidential and used only to evaluate your hotel for a
+        private acquisition offer. We do not sell, share, or publish your information.
+        Blackburn Capital Partners &middot; Fort Lauderdale, FL
+      </p>
+    </div>
+  </section>
+
+  <Footer quickLinks={quickLinks} emailLinkHref="#contact" />
+</BaseLayout>
+
+<style>
+  .hero {
+    background: var(--navy-deep);
+    padding: 120px 32px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201, 168, 76, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 168, 76, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .hero-bg-glow {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 26, 26, 0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 320px;
+    gap: 56px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .hero-eyebrow-line {
+    width: 32px;
+    height: 1px;
+    background: var(--crimson);
+    flex-shrink: 0;
+  }
+
+  .hero-eyebrow-text {
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.08;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-body {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .hero-photo-card {
+    background: var(--navy);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-photo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--crimson), var(--gold));
+    z-index: 2;
+  }
+
+  .hero-photo {
+    width: 100%;
+    display: block;
+    filter: contrast(1.02) saturate(0.95);
+  }
+
+  .hero-photo-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(20, 30, 43, 0.98) 0%, transparent 100%);
+    padding: 32px 24px 24px;
+  }
+
+  .hero-photo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .hero-photo-title {
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* ── OFFER GRID ── */
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    background: var(--white);
+  }
+
+  .offer-col {
+    padding: 40px 32px;
+    border-right: 1px solid var(--border);
+    position: relative;
+    transition: transform 0.2s;
+  }
+
+  .offer-col:last-child { border-right: none; }
+
+  .offer-col.featured {
+    background: #FAF8F2;
+    transform: scale(1.02);
+    z-index: 2;
+    box-shadow: 0 10px 40px rgba(30, 42, 58, 0.08);
+  }
+
+  .offer-col.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--crimson);
+  }
+
+  .offer-col.cash::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--warm-gray);
+  }
+
+  .offer-col.diligence::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--navy);
+  }
+
+  .offer-best-tag {
+    display: inline-block;
+    background: var(--crimson);
+    color: white;
+    font-size: 0.52rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .offer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .offer-tagline {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+
+  .offer-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--crimson);
+    line-height: 1.2;
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+
+  .offer-price-sub {
+    font-size: 0.72rem;
+    color: #666;
+    margin-bottom: 28px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .offer-features {
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  .offer-features li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-weight: 400;
+  }
+
+  .offer-features li:last-child { border-bottom: none; }
+
+  .offer-features .label {
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    font-weight: 700;
+    flex-shrink: 0;
+    width: 80px;
+  }
+
+  .offer-features .value {
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* ── BENEFITS GRID ── */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: var(--border);
+    margin-top: 48px;
+  }
+
+  .benefit-card {
+    background: var(--white);
+    padding: 36px 32px;
+    border-top: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .benefit-card:hover { border-top-color: var(--crimson); }
+
+  .benefit-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgba(30, 42, 58, 0.15);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .benefit-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+
+  .benefit-body {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #555;
+    font-weight: 400;
+  }
+
+  /* ── PROCESS ── */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .process-step {
+    position: relative;
+    padding: 0 16px;
+  }
+
+  .process-step::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    right: -20px;
+    width: 16px;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .process-step:last-child::before { display: none; }
+
+  .process-num {
+    width: 44px;
+    height: 44px;
+    background: var(--navy);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    border: 1px solid rgba(201, 168, 76, 0.25);
+  }
+
+  .process-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .process-body {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: #555;
+    font-weight: 400;
+  }
+
+  /* ── FORM SECTION (DARK) ── */
+  .form-section {
+    background: var(--navy-deep);
+    padding: 100px 32px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201, 168, 76, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 168, 76, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .form-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .form-inner :global(.section-eyebrow) { justify-content: center; }
+  .form-inner :global(.section-eyebrow-text) { color: var(--gold); }
+
+  .form-inner :global(.section-headline) {
+    color: var(--white);
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+  }
+
+  .form-inner :global(.section-headline em) { color: var(--gold); }
+
+  .form-inner :global(.section-sub) {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 0 auto 48px;
+    font-weight: 300;
+    max-width: 100%;
+  }
+
+  .form-inner :global(.form-label) { color: var(--gold); }
+
+  .form-inner :global(.form-input),
+  .form-inner :global(.form-select) {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+
+  .form-inner :global(.form-input::placeholder) {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .form-inner :global(.form-input:focus),
+  .form-inner :global(.form-select:focus) {
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .form-inner :global(.form-select option) {
+    background: var(--navy);
+    color: white;
+  }
+
+  .form-inner :global(.form-submit) {
+    background: var(--crimson);
+    font-size: 0.65rem;
+    letter-spacing: 0.24em;
+    padding: 20px;
+    margin-top: 12px;
+  }
+
+  .form-inner :global(.form-submit:hover) { background: var(--crimson-light); }
+
+  .form-inner :global(.form-disclaimer) {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+    margin-top: 24px;
+    font-weight: 300;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 56px; }
+    .hero-photo-card { max-width: 320px; margin: 0 auto; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .offer-col { border-right: none; border-bottom: 1px solid var(--border); }
+    .offer-col:last-child { border-bottom: none; }
+    .offer-col.featured { transform: none; }
+    .process-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .process-step::before { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding: 100px 24px 60px; }
+    .hero-headline { font-size: 2.3rem; }
+    .hero-body { font-size: 0.95rem; }
+    .hero-btns { flex-direction: column; align-items: stretch; }
+    .hero-btns :global(a) { text-align: center; }
+
+    .offer-col { padding: 32px 24px; }
+    .offer-name { font-size: 1.3rem; }
+    .offer-price { font-size: 1.4rem; }
+
+    .benefits-grid { grid-template-columns: 1fr; }
+    .benefit-card { padding: 28px 24px; }
+
+    .process-grid { grid-template-columns: 1fr; gap: 28px; }
+
+    .form-section { padding: 70px 20px; }
+    .form-inner :global(.section-headline) { font-size: 1.8rem; }
+    .form-inner :global(.signup-form) { grid-template-columns: 1fr; gap: 14px; }
+  }
+</style>
