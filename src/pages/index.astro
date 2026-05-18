@@ -552,12 +552,13 @@ import CredentialsStrip from '../components/CredentialsStrip.astro';
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 380px 1fr;
+    grid-template-columns: 1fr 380px;
     gap: 64px;
     align-items: start;
   }
 
-  .about-photo-wrap { position: relative; }
+  .about-photo-wrap { position: relative; grid-column: 2; grid-row: 1; }
+  .about-content { grid-column: 1; grid-row: 1; }
 
   .about-photo {
     width: 100%;
@@ -585,11 +586,11 @@ import CredentialsStrip from '../components/CredentialsStrip.astro';
   .about-gold-accent {
     position: absolute;
     top: -8px;
-    right: -8px;
+    left: -8px;
     width: 32px;
     height: 32px;
     border-top: 3px solid var(--gold);
-    border-right: 3px solid var(--gold);
+    border-left: 3px solid var(--gold);
   }
 
   .about-photo-caption {
@@ -788,6 +789,7 @@ import CredentialsStrip from '../components/CredentialsStrip.astro';
 
     .about-strip { padding: 60px 20px; }
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    .about-photo-wrap, .about-content { grid-column: 1; grid-row: auto; }
     .about-photo-wrap { max-width: 340px; margin: 0 auto; width: 100%; }
     .about-content :global(.section-headline) { font-size: 1.7rem; }
     .about-body { font-size: 0.92rem; }
