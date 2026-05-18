@@ -325,12 +325,15 @@ const quickLinks = [
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 320px;
+    grid-template-columns: 320px 1.2fr;
     gap: 56px;
     align-items: center;
     position: relative;
     z-index: 2;
   }
+
+  .hero-left { grid-column: 2; grid-row: 1; }
+  .hero-photo-card { grid-column: 1; grid-row: 1; }
 
   .hero-eyebrow {
     display: flex;
@@ -760,6 +763,7 @@ const quickLinks = [
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     .hero-inner { grid-template-columns: 1fr; gap: 56px; }
+    .hero-left, .hero-photo-card { grid-column: 1; grid-row: auto; }
     .hero-photo-card { max-width: 320px; margin: 0 auto; }
     .offer-grid { grid-template-columns: 1fr; }
     .offer-col { border-right: none; border-bottom: 1px solid var(--border); }

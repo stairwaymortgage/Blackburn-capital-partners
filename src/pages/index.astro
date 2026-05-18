@@ -314,13 +314,16 @@ import CredentialsStrip from '../components/CredentialsStrip.astro';
     margin: 0 auto;
     padding: 80px 32px;
     display: grid;
-    grid-template-columns: 1fr 380px;
+    grid-template-columns: 380px 1fr;
     gap: 60px;
     align-items: center;
     position: relative;
     z-index: 2;
     width: 100%;
   }
+
+  .hero-left { grid-column: 2; grid-row: 1; }
+  .hero-photo-wrap { grid-column: 1; grid-row: 1; }
 
   .hero-eyebrow {
     display: flex;
@@ -433,7 +436,7 @@ import CredentialsStrip from '../components/CredentialsStrip.astro';
 
   .hero-gold-rule {
     position: absolute;
-    left: -16px;
+    right: -16px;
     top: 40px;
     width: 3px;
     height: 80px;
@@ -767,6 +770,7 @@ import CredentialsStrip from '../components/CredentialsStrip.astro';
       gap: 48px;
       padding: 60px 24px;
     }
+    .hero-left, .hero-photo-wrap { grid-column: 1; grid-row: auto; }
     .hero-headline { font-size: 2.4rem; }
     .hero-body { font-size: 0.95rem; }
     .hero-btns { flex-direction: column; align-items: stretch; }
